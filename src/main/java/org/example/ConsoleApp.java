@@ -1,8 +1,6 @@
 package org.example;
 
-import org.example.request.Command;
-import org.example.request.Delete;
-import org.example.request.Get;
+import org.example.request.*;
 
 import java.util.*;
 
@@ -17,8 +15,8 @@ public class ConsoleApp {
 
         commandMap.putIfAbsent("GET", new Get(scanner));
         commandMap.putIfAbsent("DELETE", new Delete(scanner));
-//        commandMap.putIfAbsent("GET", new Get(scanner));
-//        commandMap.putIfAbsent("GET", new Get(scanner));
+        commandMap.putIfAbsent("PUT", new Put(scanner));
+        commandMap.putIfAbsent("POST", new Post(scanner));
 
         printWelcomeMessage();
 
